@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Current File (CodeLLDB)",
+      "type": "lldb",
+      "request": "launch",
+      // macOS 不需要 .exe 后缀，这里保持原样即可
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Clang++ Build Active File",
+      // 在内置终端运行，而不是弹出新窗口
+      "console": "integratedTerminal",
+      // 如果断点无法命中，尝试设为 false
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
