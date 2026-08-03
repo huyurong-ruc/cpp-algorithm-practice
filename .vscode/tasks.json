@@ -4,7 +4,7 @@
     {
       "label": "Build Active C++ File",
       "type": "shell",
-      "command": "mkdir -p \"${workspaceFolder}/build/${relativeFileDirname}\" && /usr/bin/clang++ -std=c++17 -Wall -Wextra -g \"${file}\" -o \"${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}\"",
+      "command": "mkdir -p \"/tmp/cpp-algorithm-practice/${relativeFileDirname}\" && /usr/bin/clang++ -std=c++17 -Wall -Wextra -g \"${file}\" -o \"/tmp/cpp-algorithm-practice/${relativeFileDirname}/${fileBasenameNoExtension}\"",
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -15,8 +15,7 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "detail": "将当前 C++ 文件编译到 build/，避免在源码目录生成二进制文件。"
+      "detail": "将当前 C++ 文件编译到 /tmp/cpp-algorithm-practice/。"
     }
   ]
 }
-

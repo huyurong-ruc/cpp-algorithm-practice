@@ -7,7 +7,6 @@ using namespace std;
 stack<string> myStack;
 vector<string> vec;
 int t,now_cmp=0,final_ans=-1,yuce;
-int tmp=0,top=0;
 
 void split(string cmplex){
     if(cmplex[2] != '1'){
@@ -29,11 +28,9 @@ int deal_F(string s,string name,string x,string y){
     myStack.push(name);
     vec.push_back(name);
     if(x>=y){
-        top=0;
         return 0;
     }
     else if(y=="n") {
-        top=1;
         return 1;
     }
     return 0;
@@ -47,7 +44,6 @@ int deal_E(){
         myStack.pop();
         vec.pop_back();
         final_ans=max(final_ans,now_cmp);
-        tmp=final_ans-top;
         return 1;
     }
 }
@@ -62,11 +58,9 @@ int deal_one(){
         if(res==-1) return -1;
         if(myStack.size()==1){//之前栈是空的
             final_ans=max(final_ans,now_cmp);
-            now_cmp=top;
-            tmp=now_cmp;
-        }else{
-            now_cmp = tmp + res;
         }
+        now_cmp += res;
+        
         
     }else{
         int x=deal_E();

@@ -5,7 +5,7 @@
       "name": "Debug Active C++ File",
       "type": "lldb",
       "request": "launch",
-      "program": "${workspaceFolder}/build/${relativeFileDirname}/${fileBasenameNoExtension}",
+      "program": "/tmp/cpp-algorithm-practice/${relativeFileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "Build Active C++ File",
@@ -14,4 +14,3 @@
     }
   ]
 }
-

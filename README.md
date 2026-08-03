@@ -40,12 +40,12 @@
 示例代码以 C++17 为基础，可以在仓库根目录执行：
 
 ```bash
-mkdir -p build
-clang++ -std=c++17 stl-templates/vector.cpp -o build/vector
-./build/vector
+mkdir -p /tmp/cpp-algorithm-practice
+clang++ -std=c++17 stl-templates/vector.cpp -o /tmp/cpp-algorithm-practice/vector
+/tmp/cpp-algorithm-practice/vector
 ```
 
-VS Code 的构建与调试配置会自动把可执行文件放到 `build/` 中，`.gitignore` 也会忽略该目录和 `.dSYM` 等编译产物，因此源码目录可以保持整洁。
+VS Code 的构建、调试和 Code Runner 配置都会把可执行文件放到 `/tmp/cpp-algorithm-practice/`，不会在源码目录生成二进制文件。该临时目录可能由 macOS 自动清理，需要时重新编译即可。
 
 ## 后续计划
 
