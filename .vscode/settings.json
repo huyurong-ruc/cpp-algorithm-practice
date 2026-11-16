@@ -4,5 +4,6 @@
   "code-runner.ignoreSelection": true,
   "code-runner.executorMap": {
     "cpp": "cd \"$dir\" && mkdir -p /tmp/cpp-algorithm-practice && /usr/bin/clang++ -std=c++17 -Wall -Wextra \"$fileName\" -o \"/tmp/cpp-algorithm-practice/$fileNameWithoutExt\" && \"/tmp/cpp-algorithm-practice/$fileNameWithoutExt\""
-  }
+  },
+  "editor.wordWrap": "on"
 }
